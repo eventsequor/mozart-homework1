@@ -24,9 +24,19 @@ then
 fi
 if [ -e Task1.ozf ]
 then
-    rm main.ozf
-    echo "File main.ozf deleted"
+    rm Main.ozf
+    echo "File Main.ozf deleted"
 fi
+if [ -e Utils.ozf ]
+then
+    rm Utils.ozf
+    echo "File Utils.ozf deleted"
+fi
+
+# Compile Utils
+echo "Eder Leandro Carbonero Baquero"
+echo "Compiling file Utils.oz ..."
+ozc -c Utils.oz
 
 # Compile Task1
 echo "Eder Leandro Carbonero Baquero"
@@ -38,5 +48,5 @@ echo "\nCompiling file Task1.oz ..."
 ozc -c Task2.oz
 
 # Run general program
-ozc -c Main.oz
+ozc -q -c Main.oz
 ozengine Main.ozf

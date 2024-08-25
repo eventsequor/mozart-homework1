@@ -2,9 +2,7 @@ functor
 import
     System(showInfo:Show print:Print)
 
-export
-    Calculate
-    PrintTuple
+export MainTask1
 
 define
    % FUNCTIONS
@@ -31,14 +29,16 @@ define
       {Show "\n"}
    end
 
-    local 
-        N=[1 2 3 4 5 6 7 8 9]
-    in
-        {Show "\n============================"}
-        {Show "========== Task 1 =========="}
-        {Show "============================\n"}
-        {Show "Input list: \n"}
-        {Task1.printTuple N}
-        {PrintTuple {Calculate N}}      
-    end
+   local 
+      N=[1 2 3 4 5 6 7 8 9]
+   in
+      proc {MainTask1}
+         {Show "\n============================"}
+         {Show "========== Task 1 =========="}
+         {Show "============================\n"}
+         {Show "Input list: \n"}
+         {PrintTuple N}
+         {PrintTuple {Calculate N}} 
+      end     
+   end
 end
