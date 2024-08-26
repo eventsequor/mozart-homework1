@@ -1,6 +1,4 @@
 functor
-import
-    System(showInfo:Show) 
 
 export
     PrintList

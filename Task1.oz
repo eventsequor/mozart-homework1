@@ -1,6 +1,7 @@
 functor
 import
     System(showInfo:Show print:Print)
+    Utils
 
 export MainTask1
 
@@ -37,7 +38,7 @@ define
          {Show "========== Task 1 =========="}
          {Show "============================\n"}
          {Show "Input list: \n"}
-         {PrintTuple N}
+         {Show {Utils.printList N} # "\n"}
          {PrintTuple {Calculate N}} 
       end     
    end
