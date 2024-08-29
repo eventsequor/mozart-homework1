@@ -51,6 +51,10 @@ ozc -c Task1.oz
 echo "\nCompiling file Task2.oz ..."
 ozc -c Task2.oz
 
+# Compile Task 3
+echo "\nCompiling file Task4.oz ..."
+ozc -c Task4.oz
+
 # Run general program
 echo "\nCompiling file Main.oz ..."
 ozc -q -c Main.oz
