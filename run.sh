@@ -22,11 +22,25 @@ then
     rm Task1.ozf
     echo "File Task1.ozf deleted"
 fi
+
 if [ -e Task2.ozf ]
 then
     rm Task2.ozf
     echo "File Task2.ozf deleted"
 fi
+
+if [ -e Main.ozf ]
+then
+    rm Task4.ozf
+    echo "File Task4.ozf deleted"
+fi
+
+if [ -e Main.ozf ]
+then
+    rm Task5.ozf
+    echo "File Task5.ozf deleted"
+fi
+
 if [ -e Main.ozf ]
 then
     rm Main.ozf
@@ -51,9 +65,13 @@ ozc -c Task1.oz
 echo "\nCompiling file Task2.oz ..."
 ozc -c Task2.oz
 
-# Compile Task 3
+# Compile Task 4
 echo "\nCompiling file Task4.oz ..."
-ozc -c Task4.oz
+ozc -q -c Task4.oz
+
+# Compile Task 5
+echo "\nCompiling file Task5.oz ..."
+ozc -c Task5.oz
 
 # Run general program
 echo "\nCompiling file Main.oz ..."

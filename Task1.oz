@@ -3,7 +3,9 @@ import
     System(showInfo:Show print:Print)
     Utils
 
-export MainTask1
+export
+   MainTask 
+   Calculate
 
 define
    % FUNCTIONS
@@ -33,7 +35,7 @@ define
    local 
       N=[1 2 3 4 5 6 7 8 9]
    in
-      proc {MainTask1}
+      proc {MainTask}
          {Show "\n============================"}
          {Show "========== Task 1 =========="}
          {Show "============================\n"}

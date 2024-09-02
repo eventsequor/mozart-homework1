@@ -5,7 +5,7 @@ import
 
 export
     AddingPolynomials
-    MainTask2
+    MainTask
 
 define   
 
@@ -62,7 +62,7 @@ define
         end
     end
 
-    proc {MainTask2}
+    proc {MainTask}
         local GET GET2 in
             {Show "\n============================"}
             {Show "========== Task 2 =========="}

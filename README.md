@@ -39,11 +39,39 @@ Execute the next command to run all points
 ``` sh
 sh run.sh
 ```
+
+## how to run a program task by task?
+Every task has a method name **MainTask** there you will find a test example and how to use the program, for this is necessary to make a couple of things, the first one is compile the file **Util.oz**, the second one is compile the file that you want to test, how ever you have to create a ***.oz** file from where you wil call the functions
+
+Following you will find an example that is implemente in the **Main.oz** file
+
+
+```mozart
+functor
+import
+      System(showInfo:Show) 
+      Application(exit:Exit)
+      Task1
+      Task2
+      Task4
+      Task5
+define
+   % CALL PROGRAM
+   {Task1.mainTask}
+   {Task2.mainTask}
+   {Task4.mainTask}
+   {Task5.mainTask}
+   {Exit 0}
+end
+```
+
+
+## how to compile a *.oz file
 First you have to compile the program
 ```mozart
 ozc -c name_class.oz 
 ```
-
+## how to execute a file compiled?
 Then you have to execute the compile output file with extension *.ozf
 ```mozart
 ozengine name_class.ozf

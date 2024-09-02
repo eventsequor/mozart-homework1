@@ -1,9 +1,10 @@
 functor
 import
-    System(showInfo:Show print:Print)
+    System(showInfo:Show)
     Utils(printList:PrintList)
 export
-    MainTask4
+    MainTask
+    Calculate
 define
     local X={NewCell nil} NValue={NewCell nil} in
         proc {Fill List}
@@ -84,7 +85,7 @@ define
     local LengthPol={NewCell 0} Xx={NewCell 0} in
         fun {CalculatePolynomial Poly X}
             Xx := X
-            local L Trans G in
+            local L Trans in
                 {List.length Poly L}
                 LengthPol := (L-1)
                 Trans = {Map Poly ResolvePos}
@@ -100,7 +101,7 @@ define
         end
     end
 
-    proc {MainTask4}
+    proc {MainTask}
         {Show "\n============================"}
         {Show "========== Task 4 =========="}
         {Show "============================\n"}
